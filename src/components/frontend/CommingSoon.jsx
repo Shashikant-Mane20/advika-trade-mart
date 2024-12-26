@@ -73,10 +73,10 @@ export default function ComingSoon() {
         {/* Logo with Stylish Font */}
         <div className="mb-8">
           <h1
-            className="text-4xl sm:text-5xl font-bold text-amber-700"
+            className="text-4xl sm:text-5xl font-bold text-amber-700 gap-0"
             style={{ fontFamily: "'Dancing Script', cursive" }}
           >
-            Advika<span className="text-orange-600">TradeMart</span>
+            Advika Trade Mart
           </h1>
           <p
             className="text-base sm:text-lg text-gray-700 mt-2"
