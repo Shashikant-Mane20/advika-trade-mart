@@ -1,96 +1,120 @@
-/* Snowflake container */
-.snowflakes {
-    position: fixed;
+/* Background Image with Black Overlay */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .relative {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1601436423581-9c59173e52d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .relative:before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with opacity */
+    z-index: 1;
   }
   
-  /* Individual snowflake styles */
+  /* Snowflakes Container */
+  .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  /* Snowflake Styling */
   .snowflake {
     position: absolute;
-    top: -10px; /* Start slightly above the viewport */
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.9;
-    animation: fall 10s linear infinite;
+    color: white;
+    font-size: 1.5rem;
+    animation: snowfall linear infinite;
+    opacity: 0.8;
   }
   
-  .snowflake::before {
-    content: '❄'; /* Snowflake symbol */
-    font-size: 20px;
-  }
-  
-  /* Snowflake animation (falling effect) */
-  @keyframes fall {
-    to {
-      transform: translateY(100vh);
-      opacity: 0;
+  /* Keyframe for Snowfall Animation */
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-100vh) translateX(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(100vh) translateX(20px); /* Add a slight horizontal shift */
+      opacity: 0.4;
     }
   }
   
-  /* Randomize positions and duration of snowflakes */
+  /* Custom Snowflake Positions and Delays */
   .snowflake:nth-child(1) {
-    left: 5%;
-    animation-duration: 8s;
-    animation-delay: 0s;
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 1s;
   }
   
   .snowflake:nth-child(2) {
-    left: 15%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-  }
-  
-  .snowflake:nth-child(3) {
     left: 25%;
     animation-duration: 14s;
     animation-delay: 3s;
   }
   
-  .snowflake:nth-child(4) {
+  .snowflake:nth-child(3) {
     left: 35%;
     animation-duration: 10s;
-    animation-delay: 1s;
-  }
-  
-  .snowflake:nth-child(5) {
-    left: 45%;
-    animation-duration: 16s;
-    animation-delay: 4s;
-  }
-  
-  .snowflake:nth-child(6) {
-    left: 55%;
-    animation-duration: 18s;
     animation-delay: 5s;
   }
   
-  .snowflake:nth-child(7) {
-    left: 65%;
+  .snowflake:nth-child(4) {
+    left: 50%;
+    animation-duration: 15s;
+    animation-delay: 7s;
+  }
+  
+  .snowflake:nth-child(5) {
+    left: 60%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+  }
+  
+  .snowflake:nth-child(6) {
+    left: 70%;
     animation-duration: 20s;
     animation-delay: 6s;
   }
   
+  .snowflake:nth-child(7) {
+    left: 80%;
+    animation-duration: 13s;
+    animation-delay: 9s;
+  }
+  
   .snowflake:nth-child(8) {
-    left: 75%;
-    animation-duration: 22s;
-    animation-delay: 7s;
+    left: 90%;
+    animation-duration: 17s;
+    animation-delay: 4s;
   }
   
   .snowflake:nth-child(9) {
-    left: 85%;
-    animation-duration: 24s;
+    left: 15%;
+    animation-duration: 18s;
     animation-delay: 8s;
   }
   
-  .snowflake:nth-child(10) {
-    left: 95%;
-    animation-duration: 26s;
-    animation-delay: 9s;
+  /* Text Centering */
+  .text-center {
+    position: relative;
+    z-index: 3; /* Text stays above snowflakes and overlay */
   }
+  
   
