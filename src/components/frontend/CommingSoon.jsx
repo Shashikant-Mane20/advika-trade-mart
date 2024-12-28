@@ -21,44 +21,40 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen mx-2">
+    <div className="relative flex items-center justify-center min-h-screen p-4 md:px-6 lg:px-8">
       {/* Snowflakes container */}
       <div id="snowflakes-container" className="snowflakes"></div>
 
       {/* Main Content */}
-      <div className="text-center max-w-lg sm:max-w-xl z-10">
-        <h1 className="text-4xl sm:text-5xl font-bold text-amber-200 font-dancing">
+      <div className="text-center max-w-md md:max-w-lg lg:max-w-xl space-y-4 z-10">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-200 font-dancing">
           Advika Trade Mart
         </h1>
-        <p className="text-gray-300 text-lg sm:text-xl mt-2 font-roboto">
+        <p className="text-gray-300 text-sm md:text-lg mt-2 font-roboto">
           Premium Dry Fruits Delivered Fresh to Your Doorstep
         </p>
 
-        <div className="mt-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+        <div className="mt-6 md:mt-8 space-y-2">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white">
             We're Coming Soon!
           </h2>
-          <p className="text-gray-200 text-sm sm:text-base mt-4">
+          <p className="text-gray-200 text-xs md:text-sm lg:text-base mt-2">
             Stay tuned for the grand opening of our online store.
           </p>
-        </div>
 
-        <div className="mt-6 sm:mt-8 space-y-2">
-          {/* <p className="text-gray-200 text-base sm:text-lg">
-            📞 <span className="font-bold">Contact:</span> +91 9930055555
-          </p> */}
-          
-          <div className="flex items-center text-gray-200 text-base sm:text-lg">
-  <span className="font-bold">📞 Contact:</span>
-  <span className="ml-2 font-mono text-amber-200">
-    +91 9930055555, +91 7700022222
-  </span>
-</div>
-<div className="mt-2 text-gray-200 text-base sm:text-lg">
-   <a href="http://advikatrademart.com" className="text-white underline">Advika Trademart.com</a>
-</div>
-
-
+          <div className="flex flex-col md:items-center text-gray-200 text-xs md:text-sm lg:text-base space-y-2">
+            <div className="flex items-center">
+              <span className="font-bold">📞 Contact:</span>
+              <span className="ml-2 font-mono text-amber-200">
+                +91 9930055555, +91 7700022222
+              </span>
+            </div>
+            <div>
+              <a href="http://advikatrademart.com" className="text-white underline centered-link">
+                Advika Trademart.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
